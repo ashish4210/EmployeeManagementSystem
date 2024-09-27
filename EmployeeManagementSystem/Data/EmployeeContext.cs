@@ -3,9 +3,9 @@ using EmployeeManagementSystem.Model;
 
 namespace EmployeeManagementSystem.Data
 {
-    public class EmployeContext : DbContext
+    public class EmployeeContext : DbContext
     {
-        public EmployeContext(DbContextOptions<EmployeContext> options) : base(options)
+        public EmployeeContext(DbContextOptions<EmployeeContext> options) : base(options)
         {
         }
 

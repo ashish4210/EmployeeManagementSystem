@@ -7,8 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Add support for API Controllers.
+builder.Services.AddControllers();
 
-builder.Services.AddDbContext<EmployeContext>(options =>
+
+builder.Services.AddDbContext<EmployeeContext>(options =>
     options.UseInMemoryDatabase("EmployeeDb"));
 //builder.Services.AddControllersWithViews();
 
@@ -31,4 +34,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+// Map API Controllers
+app.MapControllers();
 app.Run();

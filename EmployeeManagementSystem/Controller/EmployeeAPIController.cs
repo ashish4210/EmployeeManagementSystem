@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 [ApiController]
 public class EmployeesApiController : Controller
 {
-    private readonly EmployeContext _context;
+    private readonly EmployeeContext _context;
 
-    public EmployeesApiController(EmployeContext context)
+    public EmployeesApiController(EmployeeContext context)
     {
         _context = context;
     }

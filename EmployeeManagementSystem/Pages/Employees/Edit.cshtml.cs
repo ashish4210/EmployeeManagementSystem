@@ -9,9 +9,9 @@ namespace EmployeeManagementSystem.Pages.Employees
 {
     public class EditModel : PageModel
     {
-        private readonly EmployeContext _context;
+        private readonly EmployeeContext _context;
 
-        public EditModel(EmployeContext context)
+        public EditModel(EmployeeContext context)
         {
             _context = context;
         }

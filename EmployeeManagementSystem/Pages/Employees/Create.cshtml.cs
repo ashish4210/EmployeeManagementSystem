@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using EmployeeManagementSystem.Data;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using EmployeeManagementSystem.Model;
 using System;
@@ -9,9 +8,9 @@ namespace EmployeeManagementSystem.Pages.Employees
 {
     public class CreateModel : PageModel
     {
-        private readonly EmployeContext _context;
+        private readonly EmployeeContext _context;
 
-        public CreateModel(EmployeContext context)
+        public CreateModel(EmployeeContext context)
         {
             _context = context;
         }

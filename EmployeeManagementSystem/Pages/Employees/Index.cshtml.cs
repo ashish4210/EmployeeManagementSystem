@@ -8,9 +8,9 @@ namespace EmployeeManagementSystem.Pages.Employees
 {
     public class IndexModel : PageModel
     {
-        private readonly EmployeContext _context;
+        private readonly EmployeeContext _context;
 
-        public IndexModel(EmployeContext context)
+        public IndexModel(EmployeeContext context)
         {
             _context = context;
         }

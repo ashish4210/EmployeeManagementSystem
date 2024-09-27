@@ -8,10 +8,10 @@ namespace EmployeeManagementSystem.Pages.Employees
 {
     public class DeleteModel : PageModel
     {
-        private readonly EmployeContext _context;
+        private readonly EmployeeContext _context;
 
 
-        public DeleteModel(EmployeContext context)
+        public DeleteModel(EmployeeContext context)
         {
             _context = context;
         }
