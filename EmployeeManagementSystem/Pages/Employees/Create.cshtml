@@ -1,0 +1,25 @@
+﻿ @page
+@model EmployeeManagementSystem.Pages.Employees.CreateModel
+
+<h2>Add Employee</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Employee.Name"></label>
+        <input asp-for="Employee.Name" />
+    </div>
+    <div>
+        <label asp-for="Employee.Email"></label>
+        <input asp-for="Employee.Email" />
+    </div>
+    <div>
+        <label asp-for="Employee.DateOfBirth"></label>
+        <input asp-for="Employee.DateOfBirth" type="date" />
+    </div>
+    <div>
+        <label asp-for="Employee.Department"></label>
+        <input asp-for="Employee.Department" />
+    </div>
+    <button type="submit">Create</button>
+    <a asp-page="./Index">Back to List</a>
+</form>

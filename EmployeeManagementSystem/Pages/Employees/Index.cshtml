@@ -1,0 +1,39 @@
+﻿@page
+@model EmployeeManagementSystem.Pages.Employees.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Employee List</h2>
+
+<form method="get">
+    <input type="text" name="searchString" placeholder="Search..." value="@Request.Query["searchString"]" />
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.Employees)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.DateOfBirth.ToShortDateString()</td>
+                <td>@employee.Department</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@employee.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@employee.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Create">Add New Employee</a>

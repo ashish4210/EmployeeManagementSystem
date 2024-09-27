@@ -1,0 +1,26 @@
+﻿@page "{id:int}"
+@model EmployeeManagementSystem.Pages.Employees.EditModel
+
+<h2>Edit Employee</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Employee.Id" />
+    <div>
+        <label asp-for="Employee.Name"></label>
+        <input asp-for="Employee.Name" />
+    </div>
+    <div>
+        <label asp-for="Employee.Email"></label>
+        <input asp-for="Employee.Email" />
+    </div>
+    <div>
+        <label asp-for="Employee.DateOfBirth"></label>
+        <input asp-for="Employee.DateOfBirth" type="date" />
+    </div>
+    <div>
+        <label asp-for="Employee.Department"></label>
+        <input asp-for="Employee.Department" />
+    </div>
+    <button type="submit">Save</button>
+    <a asp-page="./Index">Cancel</a>
+</form>
